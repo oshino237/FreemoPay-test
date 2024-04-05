@@ -1,38 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;700;800&family=Rethink+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Comic+Neue&family=Fredoka:wght@300;400;500;600;700&family=Merienda&family=Nunito:wght@300;400;700;800&family=Rethink+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Merienda&family=Nunito:wght@300;400;700;800&family=Rethink+Sans&display=swap");
+* {
+  font-family: "Fredoka", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
+}
 .App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.navbr {
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* padding: 12px 15px; */
+  flex-direction: row;
+  background-color: #ceeaf3;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 3px 3px 7px #33333344;
+}
+.navbr .links {
+  /* background-color: #ffb534; */
+  height: 50px;
+  padding: 8px;
+  margin-right: 25px;
+  flex-direction: row;
+  align-items: center;
+}
+.links .navlink {
+  color: #373734;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* /////////////////////////////////////////////////////////////// */
+.body {
+  background-color: #fcf8f8;
+  border: 2px solid #fbf6ee;
+  text-align: left;
+  position: relative;
+  height: 18vh;
+  /* border-bottom: solid 2px #f0f0f0; */
+  box-shadow: 4px 4px 9px #ffdda1;
+  justify-content: space-between;
+  padding: 20px;
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+}
+/* ////////////////////////////////////////////////////////////////// */
+.error-messg {
+  margin: 100px auto 0 auto;
+}
+.actu-post {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
+  gap: 40px;
+  height: 380px;
+  overflow-y: scroll;
+  width: 100%;
+}
+.containpost {
+  width: 340%;
+  min-width: 230px;
+  min-height: 230px;
+  max-width: 300px;
+  background-color: #fafcac;
+  cursor: pointer;
+  border-radius: 10px;
+  /* border: #ffdfa9 1.6px dashed; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in-out 0.3s;
+}
+.containpost:hover {
+  background-color: #fcf485;
+}
+.containpost h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #181616;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.post-infos {
+  padding: 18px 10px;
+  text-align: justify;
+  justify-content: left;
+  color: #293b47;
+  font-size: 14px;
+}
+.postfind {
+  display: flex;
+  width: 80%;
+  border-radius: 9px;
+  background-color: #f3fcf6;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+  margin: 40px auto;
+  transition: ease-in-out 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* //////////////////////////////////////////////////////// */
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 20px 40px;
+  background-color: #0d122b;
+  color: #f3fcf6;
+  position: relative;
+  bottom: 0;
+  margin-top: 30px;
 }

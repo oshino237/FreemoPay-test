@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Firtscompo from "./Composants/Firtscompo";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./Composants/Navbar";
+import PostCherchees from "./Composants/PostCherchees";
+import Footer from "./Composants/Footer";
 
+// function PageEror() {
+//   return (
+//     <div>
+//       <h2>une erreur s'est produite</h2>
+//     </div>
+//   );
+// }
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Firtscompo />} />
+        <Route path="/recipefind/:id" element={<PostCherchees />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
